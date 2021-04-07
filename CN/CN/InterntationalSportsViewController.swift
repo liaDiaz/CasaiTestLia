@@ -11,6 +11,7 @@ import UIKit
 class InterntationalSportsViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     var en = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=061e21cbea8c42d6a846fb82598bbf18"
     var arrayApis: [String] = []
+    var apiS:String= ""
     
     var articlesNB: [[String: Any]] = []
     

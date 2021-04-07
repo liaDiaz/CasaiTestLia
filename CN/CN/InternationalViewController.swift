@@ -122,6 +122,8 @@ class InternationalViewController: UIViewController,UITableViewDataSource, UITab
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var endpointInternationalS = intSport()
+        var endpointInternationalB = intBuss()
+
         if segue.identifier == "goToInternationalSports"{
             //esto quiero que me castes como resultados view controller
             let interSportVista=segue.destination as! InterntationalSportsViewController
@@ -131,7 +133,7 @@ class InternationalViewController: UIViewController,UITableViewDataSource, UITab
         if segue.identifier == "goToInternationalBussines"{
             //esto quiero que me castes como resultados view controller
             let interBussinesVista=segue.destination as! InternationalBussinesViewController
-            
+            interBussinesVista.api = endpointInternationalB
         }
         
      // Get the new view controller using segue.destination.
